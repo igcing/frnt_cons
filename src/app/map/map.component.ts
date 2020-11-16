@@ -22,8 +22,8 @@ export class MapComponent implements OnInit {
   formSearch: FormGroup;
   comunaService: ComunaService;
   farmaciaService: FarmaciaService;
-  comunas: any;
-  farmacias: any;
+  comunas: any = [];
+  farmacias: any = [];
   constructor(comunaService: ComunaService, farmaciaService: FarmaciaService) {
     this.comunaService = comunaService;
     this.farmaciaService = farmaciaService;
