@@ -3,9 +3,9 @@
     <mat-form-field appearance="fill">
         <mat-label>Elige una comuna:</mat-label>
          <select matNativeControl formControlName="comuna">
-            <option *ngFor="let opt of comunas" [value]="opt.id">
-                {{opt.value}}
-                </option>
+            <option *ngFor="let comuna of comunas" [value]="comuna.id">
+                {{comuna.value}}
+            </option>
          </select>
         </mat-form-field>
 
@@ -17,19 +17,14 @@
         </mat-form-field>
     <button mat-button color="primary" (click)="search()"> Buscar </button>
 </form>
-<!--
-<form [formGroup]="formFounded">
-    <mat-form-field appearance="outline">
-        <mat-label>Latitud:</mat-label>
-        <input matInput id="latitud" formControlName="latitud" maxlength="9"/>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>Longitud:</mat-label>
-        <input matInput id="longitud"   formControlName="longitud" maxlength="9" />
-    </mat-form-field>
-</form>
--->
+<div *ngIf="isSearching">
+    <mat-spinner></mat-spinner>
+</div>
 
+<span *ngIf="farmacias.length==0">No se encontraron resultados... <mat-icon aria-hidden="false" aria-label="Example home icon">sentiment_dissatisfied</mat-icon></span>
+
+
+<!--código separable en componentes distintos-->
 <div *ngFor="let farm of farmacias" >
 <mat-card  class="example-card">
     <mat-card-header>

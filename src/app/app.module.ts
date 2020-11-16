@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -26,9 +27,14 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule,MatButtonModule,
-    MatIconModule,MatCardModule,
-    MatFormFieldModule,MatAutocompleteModule,MatSelectModule
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatAutocompleteModule,
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
