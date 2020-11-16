@@ -29,7 +29,7 @@ export class MapComponent implements OnInit {
     this.farmaciaService = farmaciaService;
     mapboxgl.accessToken = environment.mapbox.accessToken;
     this.formSearch = new FormGroup({
-      comuna: new FormControl(''),
+      comuna: new FormControl('',[Validators.required]),
       nombreLocal: new FormControl('', [Validators.required])
     });
   }
